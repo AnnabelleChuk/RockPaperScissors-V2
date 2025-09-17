@@ -6,10 +6,6 @@
 
     <style>
         button {
-            padding: 50px;
-            border: 10px;
-            background-color: rgb(168, 140, 172);
-            border-radius: 40%;
         }
     </style>
 </head>
@@ -29,11 +25,11 @@
         ">Scissors</button>
 
     <button onclick="
-        score.wins = 0; 
+        score.Wins = 0; 
         score.Losses = 0; 
-        score.Ties = 0
-        playGame()";> Reset Score 
+        score.Ties = 0;
         
+        alert(`Wins: ${score.Wins}, Ties: ${score.Ties}, Losses: ${score.Losses},`)"> Reset score 
     </button>
 
     <script>
