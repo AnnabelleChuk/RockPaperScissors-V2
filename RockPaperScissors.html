@@ -74,6 +74,7 @@
 
     <div class="divcenter">
         <p class="js-moves"></p>
+        <p class="js-result"></p>
         <p class="js-score"></p>
         
     </div>
@@ -84,13 +85,16 @@
         const score = 
             JSON.parse(localStorage.getItem('score')) || 
             {Wins: 0, Ties: 0, Losses: 0};
-        
+
+        let computerMove = "";
+        let playerMove = "";
+
         updateScoreElement();
+        updateMoveElement();
 
-
-        function playGame(playerMove) {
-
-            const computerMove = pickComputerMove();
+        function playGame(playerSelection) {
+            playerMove = playerSelection;
+            computerMove = pickComputerMove();
 
             let result = '';
 
@@ -132,6 +136,8 @@
             localStorage.setItem('score',JSON.stringify(score));
 
             updateScoreElement();
+            updateMoveElement();
+            document.querySelector('.js-result').innerHTML=`${result}`;
         };
 
 
@@ -140,7 +146,7 @@
             document.querySelector('.js-score').innerHTML = `Wins ${score.Wins}, Ties ${score.Ties}, Losses ${score.Losses}`;
         };
 
-
+        function updateMoveElement() {document.querySelector('.js-moves').innerHTML = ` ${computerMove} : Computer Move || Player Move : ${playerMove} `};
 
         function pickComputerMove() {
 
