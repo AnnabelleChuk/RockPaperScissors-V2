@@ -1,0 +1,55 @@
+.buttonIcon {
+            width: 100px;
+        }
+
+                .score {
+            width: 70px;
+            margin-left: 60px;
+            margin-right: 10px;
+        }
+
+        .resetButtonIcon {
+            width: 50px;
+        }
+
+        .computerIcon {
+            width:50px;
+        }
+
+        .gameButton {
+            border-width: 0px;
+            background-color: rgb(240, 240, 240);
+            margin: 20px;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-top: 60px;
+        }
+
+        .gameButton:hover {
+            background-color: rgb(158, 192, 236);
+        }
+
+        .resetButton:hover {
+            background-color: rgb(158, 192, 236);
+        }
+
+        .divcenter {
+            justify-content: center;
+            text-align: center;
+            margin: 20px;
+        }
+
+        .resetButton {
+            border-width: 0px;
+            background-color: rgb(240, 240, 240);
+            width: 150px;
+            height: 80px;
+            border-radius: 10%
+        }
+
+        .result {
+            margin:50px;
+            font-size: large;
+            font-family: 'Courier New', Courier, monospace;
+        }
